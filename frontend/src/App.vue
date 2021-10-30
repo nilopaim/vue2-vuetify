@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark data-wails-drag>
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Pcast Logo"
@@ -14,7 +14,7 @@
         <h2 class="ml-3">PCast Transmitter</h2>
       </div>
 
-      <v-spacer />
+      <v-spacer data-wails-drag/>
       <v-icon color="white" @click="onclickMinimise" class="ml-2"
         >mdi-window-minimize</v-icon
       >
