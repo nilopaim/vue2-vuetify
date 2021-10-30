@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar app color="light-blue lighten-2" dark>
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="Pcast Logo"
           class="shrink mr-2"
           contain
           src="./assets/logo.png"
@@ -14,16 +14,18 @@
         <h2 class="ml-3">PCast Transmitter</h2>
       </div>
 
-      <!-- <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <v-spacer />
+      <v-icon color="white" @click="onclickMinimise" class="ml-2"
+        >mdi-window-minimize</v-icon
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn> -->
+
+      <v-icon color="white" @click="onclickMaximise" class="ml-2"
+        >mdi-window-maximize</v-icon
+      >
+
+      <v-icon color="white" @click="onclickQuit" class="ml-2"
+        >mdi-window-close</v-icon
+      >
     </v-app-bar>
 
     <v-main>
@@ -36,9 +38,19 @@
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
+  methods: {
+    onclickMinimise() {
+      window.runtime.WindowMinimise();
+    },
+
+    onclickMaximise() {
+      window.runtime.WindowMaximise();
+    },
+
+    onclickQuit() {
+      window.runtime.Quit();
+    },
+  },
 };
 </script>
 
