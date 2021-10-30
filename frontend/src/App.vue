@@ -11,10 +11,10 @@
           width="60"
         />
 
-        <h2 class="ml-3">PCast Transmitter</h2>
+        <h2 class="ml-3" data-wails-drag>PCast Transmitter</h2>
       </div>
 
-      <v-spacer data-wails-drag/>
+      <v-spacer />
       <v-icon color="white" @click="onclickMinimise" class="ml-2"
         >mdi-window-minimize</v-icon
       >
